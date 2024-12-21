@@ -1,0 +1,17 @@
+@use '../../../styles/tools/index' as *;
+@use 'sass:math';
+
+$grid-breakpoints-ui-kit: () !default;
+$grid-breakpoints-ui-kit: map-deep-merge(
+  (
+    'xs': 0,
+    'sm': 600px,
+    'md': 960px,
+    'lg': 1280px,
+    'xl': 1920px,
+    'xxl': 2560px,
+  ),
+  $grid-breakpoints-ui-kit
+);
+$breakpoints: 1600px, 1920px;
+$gaps: 16px, 24px;

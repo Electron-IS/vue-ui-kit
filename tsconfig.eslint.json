@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+      "**/*.ts",
+      "**/*.js",
+      "**/.*.js",
+      "**/*.vue",
+      "svgo.config.cjs",
+      ".eslintrc.cjs",
+      "stylelint.config.cjs"
+    ]
+  }
+  

@@ -1,0 +1,37 @@
+@use '../settings';
+
+@mixin transition-default() {
+  &-enter-active {
+    transition-duration: 0.3s !important;
+    transition-timing-function: settings.$standard-easing !important;
+  }
+
+  &-leave-active {
+    transition-duration: 0.3s !important;
+    transition-timing-function: settings.$standard-easing !important;
+  }
+
+  &-move {
+    transition-duration: 0.5s !important;
+    transition-property: transform !important;
+    transition-timing-function: settings.$standard-easing !important;
+  }
+}
+
+.expand-transition {
+  @include transition-default;
+
+  &-enter-active,
+  &-leave-active {
+    transition-property: height !important;
+  }
+}
+
+.expand-x-transition {
+  @include transition-default;
+
+  &-enter-active,
+  &-leave-active {
+    transition-property: width !important;
+  }
+}

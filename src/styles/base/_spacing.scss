@@ -1,0 +1,35 @@
+// Генерация стилей отступов
+// стили занимают 4,3 Кб
+// todo действительно ли они нужны?
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top: var(--indent-size-#{$i}) !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: var(--indent-size-#{$i}) !important;
+  }
+  .mr-#{$i} {
+    margin-right: var(--indent-size-#{$i}) !important;
+  }
+  .ml-#{$i} {
+    margin-left: var(--indent-size-#{$i}) !important;
+  }
+  .m-#{$i} {
+    margin: var(--indent-size-#{$i});
+  }
+  .pt-#{$i} {
+    padding-top: var(--indent-size-#{$i});
+  }
+  .pb-#{$i} {
+    padding-bottom: var(--indent-size-#{$i});
+  }
+  .pr-#{$i} {
+    padding-right: var(--indent-size-#{$i});
+  }
+  .pl-#{$i} {
+    padding-left: var(--indent-size-#{$i});
+  }
+  .p-#{$i} {
+    padding: var(--indent-size-#{$i});
+  }
+}

@@ -1,0 +1,34 @@
+// Здесь содержатся переменные, содержащие маппинг на переменные цветов из статики
+
+/* Input Default */
+$input-default-text: var(--primary-colors-primary);
+$input-default-placeholder: var(--primary-colors-secondary);
+$input-default-border-color: var(--primary-colors-secondary-2);
+$input-default-border-color: var(--primary-colors-secondary-2);
+$input-default-icon-color: var(--primary-colors-secondary);
+
+/* Input Active */
+$input-active-border-color: var(--accent-colors-blue);
+$input-active-icon-color: var(--primary-colors-primary);
+$input-active-text-color: var(--primary-colors-primary);
+
+/* Input Disabled */
+$input-disabled-text-color: var(--primary-colors-secondary);
+$input-disabled-placeholder-color: var(--primary-colors-secondary);
+$input-disabled-placeholder-color: var(--primary-colors-secondary);
+$input-disabled-border-color: var(--primary-colors-secondary-2);
+$input-disabled-bg-color: var(--primary-colors-disabled);
+$input-disabled-icon-color: var(--primary-colors-secondary);
+
+/* Input Readonly */
+$input-readonly-bg-color: var(--primary-colors-substrate);
+$input-readonly-border-color: var(--primary-colors-secondary-2);
+$input-readonly-text-color: var(--primary-colors-primary);
+$input-readonly-placeholder-color: var(--primary-colors-secondary);
+$input-readonly-icon-color: var(--primary-colors-secondary);
+
+$checkboxes-label-color: var(--primary-colors-primary);
+$checkboxes-disabled-label-color: var(--primary-colors-secondary);
+
+$remove-btn-upload-card: var(--primary-colors-secondary);
+$more-btn-upload-card: var(--primary-colors-secondary);

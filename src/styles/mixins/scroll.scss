@@ -1,0 +1,40 @@
+@mixin vertical-scroll($minHeight: 30px) {
+  overflow-y: auto;
+
+  @include scrollbar($minHeight)
+}
+
+@mixin horizontal-scroll() {
+  overflow-x: auto;
+
+  @include scrollbar
+}
+
+@mixin scrollbar($minHeight: 30px) {
+  &::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    padding: 8px;
+
+  }
+
+  &::-webkit-scrollbar-thumb {
+    min-height: $minHeight;
+    border-radius: 16px;
+    border: 8px solid transparent;
+    background-clip: content-box;
+    background-color: var(--primary-colors-secondary-3);
+
+
+    &:hover {
+      background-color: var(--primary-colors-hover-light);
+    }
+
+    &:active {
+      background-color: var(--primary-colors-hover);
+    }
+  }
+}

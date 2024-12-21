@@ -1,0 +1,26 @@
+// Размеры Input
+$input-height-sm: 32px;
+$input-padding-sm: 0 12px;
+$input-height-medium: 40px;
+$input-padding-medium: 0 12px;
+$input-height-large: 48px;
+$input-padding-large: 0 12px;
+
+// todo Используется только в чекбоксах, мб туда и перенести
+$control-size-large: 24px;
+$control-size-medium: 18px;
+$control-size-small: 14px;
+
+// Border-radius
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+
+$standard-easing: cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+// todo Используется только в кнопках
+$height-el: (
+  'small': 32px,
+  'medium': 40px,
+  'large': 48px
+);
+

@@ -1,0 +1,35 @@
+$colors: (
+  blue: var(--accent-colors-blue),
+  green: var(--accent-colors-green),
+  yellow: var(--accent-colors-yellow),
+  red: var(--accent-colors-red),
+  primary: var(--primary-colors-primary),
+  primary2: var(--primary-colors-primary-2),
+  secondary: var(--primary-colors-secondary),
+  secondary2: var(--primary-colors-secondary-2),
+  secondary3: var(--primary-colors-secondary-3),
+  lines: var(--primary-colors-lines),
+  hover: var(--primary-colors-hover),
+  hover2: var(--primary-colors-hover-light),
+  disabled: var(--primary-colors-disabled),
+  background: var(--primary-colors-background),
+  background-dark: var(--primary-colors-background-dark),
+  substrate: var(--primary-colors-substrate),
+  blue-substrate: var(--accent-colors-blue-substrate),
+  light: var(--primary-colors-light),
+  white: var(--primary-colors-white)
+);
+
+@mixin generate-classes($colors-map, $prefix, $property) {
+  @each $name, $color in $colors-map {
+    .#{$prefix + '-' + $name} {
+      #{$property}: $color;
+    }
+  }
+}
+
+// генерация классов типа "bgc-<ЦВЕТ ИЗ ДИЗАЙН СИСТЕМЫ>" для каждого цвета из дизайн-системы (эти классы занимают 1Кб)
+// todo можно удалить
+@include generate-classes($colors, 'bgc', 'background-color');
+// генерация классов типа "text-<ЦВЕТ ИЗ ДИЗАЙН СИСТЕМЫ>" для каждого цвета из дизайн-системы (эти классы занимают 1Кб)
+@include generate-classes($colors, 'text', 'color');

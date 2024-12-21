@@ -1,0 +1,290 @@
+@use 'variables' as *;
+@use '../../../styles/settings/index' as *;
+@use 'sass:map';
+@use '../../../styles/base/base';
+
+/* stylelint-disable */
+
+@mixin button-size($size) {
+  $font-sizes: (
+    'small': 14px,
+    'medium': 14px,
+    'large': 16px
+  );
+  $divider-sizes: (
+    'small': 16px,
+    'medium': 20px,
+    'large': 24px,
+  );
+  $divider-margin: (
+    'small': 8px,
+    'medium': 10px,
+    'large': 12px,
+  );
+
+  &--#{$size} {
+    height: map.get($height-el, $size);
+    font-size: map.get($font-sizes, $size);
+
+    &.v-btn--icon {
+      width: map.get($height-el, $size);
+      height: map.get($height-el, $size);
+    }
+
+    .v-btn__divider {
+      height: map.get($divider-sizes, $size);
+      margin: 0 map.get($divider-margin, $size) 0 16px;
+    }
+  }
+}
+
+.v-btn {
+  position: relative;
+  display: inline-block;
+  height: $button-height;
+  margin: 0;
+  padding: 0 16px;
+  border-radius: $button-border-radius;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  transition-duration: $animation-duration;
+  cursor: pointer;
+  grid-template-columns: max-content auto max-content;
+  user-select: none;
+
+  @include button-size(small);
+  @include button-size(medium);
+  @include button-size(large);
+
+  &__underlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    gap: $button-gap;
+  }
+
+  i {
+    transition-duration: $animation-duration;
+  }
+
+  &__content {
+    font-weight: 500;
+  }
+
+
+
+  &--variant-default {
+    border: none;
+    background: var(--accent-colors-blue);
+    color: var(--primary-colors-white);
+
+
+    &:hover {
+      background-color: var(--primary-colors-hover);
+    }
+
+    &:active {
+      background-color: var(--primary-colors-primary-pressed);
+    }
+
+    i {
+      color: var(--primary-colors-white);
+    }
+
+    .v-btn__divider {
+      background: var(--primary-colors-white);
+      opacity: 0.3;
+    }
+  }
+
+  &--variant-text {
+    background-color: transparent;
+    color: var(--accent-colors-blue);
+
+    &:hover {
+      background-color: var(--primary-colors-light);
+      color: var(--primary-colors-hover);
+
+      i {
+        color: var(--primary-colors-hover);
+      }
+
+      .v-btn__divider {
+        background: var(--primary-colors-hover);
+        opacity: 0.3;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      color: var(--primary-colors-primary-pressed);
+
+      .v-btn__divider {
+        background: var(--primary-colors-primary-pressed);
+        opacity: 0.3;
+      }
+    }
+
+    .v-btn__divider {
+      background: var(--accent-colors-blue);
+      opacity: 0.3;
+    }
+
+  }
+
+  &--variant-outlined {
+    border: 1px solid;
+    border-color: var(--accent-colors-blue);
+    background-color: transparent;
+    color: var(--accent-colors-blue);
+
+
+    &:hover {
+      border-color: var(--primary-colors-hover);
+      background-color: var(--primary-colors-substrate) !important;
+      color: var(--primary-colors-hover);
+
+      i {
+        color: var(--primary-colors-hover);
+      }
+
+      .v-btn__divider {
+        background: var(--primary-colors-hover);
+        opacity: 0.3;
+      }
+    }
+
+
+
+    &:active {
+      border-color: var(--primary-colors-primary-pressed);
+      background-color: transparent !important;
+      color: var(--primary-colors-primary-pressed);
+
+      i {
+        color: var(--primary-colors-primary-pressed);
+      }
+
+      .v-btn__divider {
+        background: var(--primary-colors-primary-pressed);
+        opacity: 0.3;
+      }
+    }
+
+    .v-btn__divider {
+      background: var(--accent-colors-blue);
+      opacity: 0.3;
+    }
+  }
+
+  &--variant-link {
+    height: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--accent-colors-blue);
+
+    & .v-btn__content {
+      font-weight: 400;
+    }
+
+
+    &:hover {
+      // border-color: var(--primary-colors-hover);
+      // background-color: var(--primary-colors-substrate) !important;
+      color: var(--primary-colors-hover);
+
+      i {
+        color: var(--primary-colors-hover);
+      }
+
+      .v-btn__divider {
+        background: var(--primary-colors-hover);
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--variant-link.v-btn--disabled {
+    color: var(--primary-colors-secondary-2);
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    i {
+      color: var(--primary-colors-secondary-2);
+    }
+
+    .v-btn__divider {
+      background: var(--primary-colors-disabled);
+      opacity: 1;
+    }
+
+    &.v-btn--variant-default {
+      background: var(--primary-colors-substrate);
+      color: var(--primary-colors-secondary-2);
+
+      i {
+        color: var(--primary-colors-secondary-2);
+      }
+    }
+
+    &.v-btn--variant-outlined {
+      border-color: var(--primary-colors-secondary);
+      color: var(--primary-colors-secondary);
+
+      .v-btn__divider {
+        background: var(--primary-colors-secondary);
+        opacity: 0.3;
+      }
+    }
+
+    &.v-btn--variant-text {
+      border-color: var(--primary-colors-secondary);
+      color: var(--primary-colors-secondary);
+
+      i {
+        color: var(--primary-colors-secondary);
+      }
+
+      .v-btn__divider {
+        background: var(--primary-colors-primary);
+        opacity: 0.3;
+      }
+    }
+
+  }
+
+  &--icon {
+    //width: $button-icon-height;
+    //height: $button-icon-height;
+    padding: 0;
+    border-radius: $border-radius-small;
+    gap: 0;
+  }
+
+  &--with-divider {
+    padding: 0 8px 0 16px;
+
+    .v-btn__icon {
+      &--prepend {
+        margin-right: 8px;
+      }
+    }
+
+    .v-btn__underlay {
+      gap: 0;
+    }
+
+    .v-btn__divider {
+      width: 1px;
+    }
+  }
+}
+

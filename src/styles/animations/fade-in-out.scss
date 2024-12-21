@@ -1,0 +1,13 @@
+@use '../settings';
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .28s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+

@@ -1,0 +1,33 @@
+.sel-icon {
+  position: relative;
+  display: inline-block;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @mixin paste-icon($size) {
+    width: $size;
+    min-width: $size;
+    height: $size;
+    min-height: $size;
+  }
+
+  &__x-small {
+    @include paste-icon(12px);
+  }
+
+  &__small {
+    @include paste-icon(16px);
+  }
+
+  &__medium {
+    @include paste-icon(20px);
+  }
+
+  &__large {
+    @include paste-icon(24px);
+  }
+}

@@ -1,0 +1,42 @@
+@use '../../../styles/settings/index' as *;
+
+.tippy-box[data-theme~='table-tooltip'] {
+  margin: 0;
+  margin-right: -30px;
+  border-radius: 8px;
+  background-color: var(--primary-colors-white);
+  font-size: var(--indent-size-3);
+  color: var(--primary-colors-primary);
+  box-shadow: 0 8px 24px rgb(11 46 86 / 10%);
+  word-break: break-word;
+
+  .tippy-content {
+    padding: 0 !important; 
+  }
+}
+
+.tippy-box[data-theme~='default'] {
+  margin: 0;
+  border-radius: 8px;
+  background-color: var(--primary-colors-white);
+  font-size: var(--indent-size-3);
+  color: var(--primary-colors-primary);
+  box-shadow: 0 8px 24px rgb(11 46 86 / 10%);
+  word-break: break-word;
+}
+
+.tippy-box[data-theme~='filter'] {
+  margin: var(--indent-size-4);
+  padding: var(--indent-size-3);
+  border-radius: var(--indent-size-2);
+  background-color: var(--primary-colors-white);
+  font-size: var(--indent-size-3);
+  line-height: var(--indent-size-4);
+  color: var(--primary-colors-primary);
+  box-shadow: 0 8px 24px rgb(11 46 86 / 10%);
+  word-break: break-word;
+}
+
+.tippy-arrow {
+  color: #fff;
+}

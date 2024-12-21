@@ -1,0 +1,56 @@
+@use './_variables.scss' as *
+
+.flex-gap-auto
+  gap: 16px
+  @for $i from 1 through length($gaps)
+    @media (min-width: nth($breakpoints, $i))
+      gap: nth($gaps, $i)
+
+.flex-gap
+  @for $i from 1 through 10
+    &-#{$i}
+      gap: var(--indent-size-#{$i})
+.flex
+  display: flex
+
+  &-col
+    flex-direction: column
+
+  &-row
+    flex-direction: row
+
+  &-justify
+    &-fe
+      justify-content: flex-end
+
+    &-fs
+      justify-content: flex-start
+
+    &-c
+      justify-content: center
+
+    &-sb
+      justify-content: space-between
+
+    &-sa
+      justify-content: space-around
+
+  &-align
+    &-fe
+      align-items: flex-end
+
+    &-fs
+      align-items: flex-start
+
+    &-c
+      align-items: center
+
+  &-full
+    &-width
+      width: 100%
+
+    &-height
+      height: 100%
+
+  &-wrap
+    flex-wrap: wrap

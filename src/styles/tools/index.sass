@@ -1,0 +1,15 @@
+@forward './functions'
+
+@mixin visually-hidden
+  position: absolute !important
+  height: 1px
+  width: 1px
+  overflow: hidden
+  clip: rect(1px, 1px, 1px, 1px)
+  white-space: nowrap
+  display: initial
+
+@mixin genIndent($name)
+  @for $i from 1 through 10
+    &-#{$i}
+      #{$name}: var(--indent-size-#{$i})
