@@ -1,0 +1,25 @@
+import{f as u}from"./index-BGHfnJZS.js";import{d as c,b as m,o as p,e as y,f,n as b}from"./vue.esm-bundler-Cg6rw2kB.js";import{_ as g}from"./_plugin-vue_export-helper-DlAUqK2U.js";const k=["disabled"],a=c({__name:"button",props:{type:{default:"button"},variant:{default:"primary"},size:{default:"medium"},disabled:{type:Boolean,default:!1}},emits:["click"],setup(t,{emit:i}){const e=t,o=i,r=()=>{console.log("click"),o("click")},d=m(()=>`btn btn-${e.variant} btn-${e.size} ${e.disabled?"btn-disabled-"+e.variant:""}`);return(l,v)=>(p(),y("button",{disabled:e.disabled,class:b(d.value),onClick:r},[f(l.$slots,"default",{},void 0,!0)],10,k))}}),s=g(a,[["__scopeId","data-v-5795f703"]]);a.__docgenInfo={exportName:"default",displayName:"button",type:1,props:[{name:"type",global:!1,description:"",tags:[],required:!1,type:"string",declarations:[],schema:"string",default:'"button"'},{name:"variant",global:!1,description:"",tags:[],required:!1,type:'"default" | "primary" | "outline" | "text" | "secondary" | "link"',declarations:[],schema:{kind:"enum",type:'"default" | "primary" | "outline" | "text" | "secondary" | "link"',schema:['"default"','"primary"','"outline"','"text"','"secondary"','"link"']},default:'"primary"'},{name:"size",global:!1,description:"",tags:[],required:!1,type:"string",declarations:[],schema:"string",default:'"medium"'},{name:"disabled",global:!1,description:"",tags:[],required:!1,type:"boolean | undefined",declarations:[],schema:{kind:"enum",type:"boolean | undefined",schema:["undefined","false","true"]},default:"false"},{name:"key",global:!0,description:"",tags:[],required:!1,type:"PropertyKey | undefined",declarations:[],schema:{kind:"enum",type:"PropertyKey | undefined",schema:["undefined","string","number","symbol"]}},{name:"ref",global:!0,description:"",tags:[],required:!1,type:"VNodeRef | undefined",declarations:[],schema:{kind:"enum",type:"VNodeRef | undefined",schema:["undefined","string","Ref<any, any>",{kind:"event",type:"(ref: Element | ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}, {}, {}, string, ComponentProvideOptions>, ... 4 more ..., any> | null, refs: Record<...>): void"}]}},{name:"ref_for",global:!0,description:"",tags:[],required:!1,type:"boolean | undefined",declarations:[],schema:{kind:"enum",type:"boolean | undefined",schema:["undefined","false","true"]}},{name:"ref_key",global:!0,description:"",tags:[],required:!1,type:"string | undefined",declarations:[],schema:{kind:"enum",type:"string | undefined",schema:["undefined","string"]}},{name:"class",global:!0,description:"",tags:[],required:!1,type:"unknown",declarations:[],schema:"unknown"},{name:"style",global:!0,description:"",tags:[],required:!1,type:"unknown",declarations:[],schema:"unknown"}],events:[{name:"click",description:"",tags:[],type:"[]",signature:'(event: "click"): void',declarations:[],schema:[]}],slots:[{name:"default",type:"{}",description:"",declarations:[],schema:{kind:"object",type:"{}"}}],exposed:[{name:"type",type:"string",description:"",declarations:[],schema:"string"},{name:"variant",type:'"default" | "primary" | "outline" | "text" | "secondary" | "link"',description:"",declarations:[],schema:{kind:"enum",type:'"default" | "primary" | "outline" | "text" | "secondary" | "link"',schema:['"default"','"primary"','"outline"','"text"','"secondary"','"link"']}},{name:"size",type:"string",description:"",declarations:[],schema:"string"},{name:"disabled",type:"boolean",description:"",declarations:[],schema:{kind:"enum",type:"boolean",schema:["false","true"]}}],sourceFiles:"/Users/ula/Work/electron/common/my-ui-kit/src/components/common/button/button.vue"};const _={title:"Example/Button",component:s,tags:["autodocs"],argTypes:{variant:{control:"select",options:["outline","primary"]},size:{control:"select",options:["small","medium","large"]},disabled:{control:"boolean"}},args:{variant:"primary",onClick:u()}},n={render:t=>({components:{Button:s},setup(){return{args:t}},template:`
+      <div style="display: flex; gap: 20px;">
+        <Button variant="primary">Нажми меня primary</Button>
+        <Button variant="primary" disabled>Нажми меня disabled</Button>
+        <Button variant="outline">Нажми меня outline</Button>
+        <Button variant="outline" disabled>Нажми меня disabled</Button>
+      </div>`})};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  render: args => ({
+    components: {
+      Button
+    },
+    setup() {
+      return {
+        args
+      };
+    },
+    template: \`
+      <div style="display: flex; gap: 20px;">
+        <Button variant="primary">Нажми меня primary</Button>
+        <Button variant="primary" disabled>Нажми меня disabled</Button>
+        <Button variant="outline">Нажми меня outline</Button>
+        <Button variant="outline" disabled>Нажми меня disabled</Button>
+      </div>\`
+  })
+}`,...n.parameters?.docs?.source}}};const q=["Example"];export{n as Example,q as __namedExportsOrder,_ as default};

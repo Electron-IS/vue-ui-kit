@@ -1,6 +1,6 @@
 {
   "name": "@electron-is/vue-ui-kit",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "UI Kit for Electron",
   "type": "module",
   "files": [
